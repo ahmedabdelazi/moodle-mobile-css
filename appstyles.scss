@@ -1,0 +1,111 @@
+// SCSS für MoodleMobile 2 App
+// Einbringen der Universitätsfarbe, Aufräumen des Dashboards / der Kursübersicht (Entfernen der Kursbilder, ...)
+
+$jmuprimary: rgb(0, 65, 136);
+$light: white;
+$selectedlight: lightgrey;
+
+ion-app.app-root {
+
+  color: $jmuprimary;
+
+  .button,
+  ion-select.core-button-select,
+  .core-button-select {
+    color: $jmuprimary !important;
+  }
+
+  .bar-buttons core-context-menu .bar-button {
+    color: $light !important;
+  }
+
+  .core-primary-selected-item {
+    border-color: $jmuprimary !important;
+  }
+
+  .core-tabs-bar .tab-slide[aria-selected=true] {
+    color: $jmuprimary !important;
+    border-color: $jmuprimary !important;
+  }
+
+  .core-tabs-bar .tab-slide[aria-selected=true] {
+    color: $jmuprimary !important;
+    border-color: $jmuprimary !important;
+  }
+
+  .toggle-icon,
+  .toggle-checked .toggle-icon {
+    background-color: $jmuprimary;
+  }
+
+  .toolbar-background, .toolbar-background-ios {
+    background-color: $jmuprimary;
+  }
+
+  button.button {
+    .button-default, .button-ios .button-default-ios {
+      background-color: $jmuprimary;
+      color: $light !important;
+    }
+  }
+
+  .core-primary-selected-item {
+    border-color: $jmuprimary !important;
+  }
+
+  .tabbar {
+    background-color: $jmuprimary;
+    color: $light;
+
+    .tab-button[aria-selected=true] .tab-button-icon {
+      color: darkorange //$selectedlight;
+    }
+  }
+
+  .toolbar-background, .toolbar-background-ios {
+    background-color: $jmuprimary;
+  }
+
+  .item.item-block.item-ios.item-radio.item-radio-checked ion-label {
+    color: $jmuprimary;
+  }
+
+  page-core-courses-my-courses,
+  page-core-courses-dashboard {
+    :not(core-sitehome-enrolled-course-list) {
+      .core-courseoverview .card .core-course-thumb,
+      .core-courseoverview .card .core-course-thumb {
+        display: none;
+      }
+
+      ion-col:has(.core-courseoverview) {
+        margin-bottom: -14px !important;
+      }
+
+      core-courses-course-progress {
+        ion-item.item.item-block.core-course-link {
+          padding: .25em !important;
+          padding-left: .8em !important;
+          border-left: .2em solid $jmuprimary;
+        }
+
+        .item.item-block:not(.core-course-link) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // im Dashboard aufräumen
+  addon-block-recentlyaccessedcourses {
+    display: none;
+  }
+
+  .list, .list-ios  {
+    margin-bottom: -1px;
+    .item-block .item-inner {
+      border-bottom: none;
+    }
+  }
+
+}
